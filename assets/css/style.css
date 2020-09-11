@@ -1,7 +1,57 @@
-#bg {
+.bg {
   position: fixed; 
   top: 0; 
   left: 0; 
   min-width: 100%;
   min-height: 100%;
 }
+
+/* header */
+
+.header {
+    position: relative;
+    padding-top: 50px;
+    display: table;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.header img {
+    width: 350px;
+    height: 175px;
+}
+
+/*rules*/
+
+#rules {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    z-index: 1;
+    max-width: 400px;
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: rgba(230, 230, 230, .3);
+    text-align: center;
+}
+
+/*play button*/
+
+.play-button {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    z-index: 1;
+    width:150px;
+    height:75px;
+    border-radius: 5px;
+    font-size:50px;
+    font-weight:bold;
+    background-color: #0038f4;
+    color: #aefff4;
+}
+
+.play-button a {
+    text-decoration: none;
+}
+
