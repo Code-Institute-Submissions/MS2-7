@@ -1,3 +1,5 @@
+/*Index page*/
+
 .bg {
   position: fixed; 
   top: 0; 
@@ -64,6 +66,37 @@
     color: #aefff4;
 }
 
+/*Quiz page*/
+
+.lives {
+    padding-top: 2vh;
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    z-index: 1;
+    margin-bottom: 3vh;
+}
+
+.lives img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.crest {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    z-index: 1;
+    margin-bottom: 10vh;    
+}
+
+.crest img {
+    width: 200px;
+    height: 200px;
+}
+
 /*Media queries*/
 
 @media only screen and (min-width: 768px) {
@@ -77,4 +110,4 @@
     min-width: 600px;
     font-size: x-large;
 }
-  }
+}
