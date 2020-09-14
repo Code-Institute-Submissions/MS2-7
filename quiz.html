@@ -5,30 +5,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script src="assests/js/script.js"></script>
 	<title>CrestTest: A Fun Football Quiz</title>
 </head>
 
-<body>
-
-<!--Background image-->
-
-	<img src="assets/images/background-images/emirates.jpg" class="bg" alt="image of a football stadium">
-
-<!--Lives left (footballs)-->
-
-    <div class="lives"><img src="assets/images/misc-images/whiteball.jpg" alt="A white football"><img src="assets/images/misc-images/whiteball.jpg" alt="A white football"><img src="assets/images/misc-images/whiteball.jpg" alt="A white football"></div>
-
-<!--Crest Image-->
-
-    <div class="crest"><img src="assets/images/easy-crests/manutd.png" alt="Manchester United Crest"></div>
-
-    <div class="options">
-        <button class="a">Premier League</button>
-        <button class="b">Championship</button>
-        <br class="line-break">
-        <button class="c">League One</button>
-        <button class="d">Scottish Premiership</button>
-        
+<body class="quiz-page">
+    <div class="container">
+        <div id="crest-container">
+            <div id="crest"><img src="assets/images/easy-crests/manutd.png" alt=""></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
     </div>
 
 </body>
