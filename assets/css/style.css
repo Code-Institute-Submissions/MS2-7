@@ -68,6 +68,8 @@
 
 /*Quiz page*/
 
+/*Lives*/
+
 .lives {
     padding-top: 2vh;
     position: relative;
@@ -84,6 +86,8 @@
     padding: 5px;
 }
 
+/*Crest*/
+
 .crest {
     position: relative;
     display: table;
@@ -96,6 +100,28 @@
     width: 200px;
     height: 200px;
 }
+
+/*Options*/
+
+.options {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+button{
+    display: table;
+    margin: 0 auto;
+    min-width: 250px;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.line-break {
+    display: none;
+}
+
 
 /*Media queries*/
 
@@ -110,4 +136,30 @@
     min-width: 600px;
     font-size: x-large;
 }
+
+.lives img {
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+}
+
+.crest img {
+    width: 300px;
+    height: 300px;
+}
+
+button {
+    display: inline-block;
+    font-size: x-large;
+    min-width: 350px;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.line-break {
+    display: block;
+} 
+
 }
