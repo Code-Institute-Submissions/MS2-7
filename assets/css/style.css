@@ -137,3 +137,33 @@
 .hide {
     display: none;
 }
+
+
+/* background image */
+
+.background-image {
+  background-image: url("https://www.arsenal.com/sites/default/files/styles/large_16x9/public/images/emirates_11.jpg?itok=xMYQFoDi");
+  background-size: auto 100%;
+  -webkit-animation: backgroundscroll 50s linear infinite alternate;
+  animation: backgroundscroll 50s linear infinite alternate;
+}
+
+@-webkit-keyframes backgroundscroll {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes backgroundscroll {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
+}
