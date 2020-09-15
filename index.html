@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>CrestTest: A Fun Football Quiz</title>
 </head>
-<body>
+<body class="quiz-page background-image">
 
-<!--Background image-->
-
-    <img src="assets/images/background-images/crowd.jpg" class="bg" alt="image of a football crowd">
-
-<!--Header-->   
-
-    <div class="header">
-        <a href="#">
-        <img src="assets/images/misc-images/cresttest.png" alt="CrestTest Logo">
-        </a>
-    </div>
-
-<!--Rules-->
+    <div class="container">
+        
+        <div class="controls">
+        <div id="header"><img src="assets/images/misc-images/cresttest2.png" alt="header"></div>
 
     <div id="rules">
         <h1>Aim of the game</h1>
         <p>Recognise the team from the crest?<br>What league did they start the 2020/21 season in?<br>It gets harder as you go...<br>You have 3 lives, can you get all 10?</p>
     </div>
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
 
-<!--Play button-->
-
-    <div class="play-button">
-        <a href="quiz.html">Play</a>
+    <div id="question-container" class="hide">
+            <div id="question"><img id="crest" src="assets/images/misc-images/cresttest.png"></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
     </div>
-    
+
+<script src="assets/js/script.js"></script>
+
 </body>
+
 </html>
