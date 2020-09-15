@@ -26,7 +26,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    document.getElementById('crest').src = question.pict
     question.answers.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
@@ -77,7 +77,7 @@ function clearStatusClass(element) {
 
 const questions = [
     {
-        question: 'Manchester United?',
+        pict:  "assets/images/easy-crests/manutd.png",
         answers: [
             {text: 'Premier League', correct: true},
             {text: 'Championship', correct: false},
@@ -86,7 +86,7 @@ const questions = [
         ]
     },
     {
-        question: 'Millwall?',
+        pict:  "assets/images/easy-crests/millwall.png",
         answers: [
             {text: 'Premier League', correct: false},
             {text: 'Championship', correct: true},
@@ -95,7 +95,7 @@ const questions = [
         ]
     },
     {
-        question: 'Rangers?',
+        pict:  "assets/images/easy-crests/rangers.png",
         answers: [
             {text: 'Premier League', correct: false},
             {text: 'Championship', correct: false},
@@ -104,7 +104,7 @@ const questions = [
         ]
     },
     {
-        question: 'Aston Villa?',
+        pict:  "assets/images/easy-crests/villa.png",
         answers: [
             {text: 'Premier League', correct: true},
             {text: 'Championship', correct: false},
