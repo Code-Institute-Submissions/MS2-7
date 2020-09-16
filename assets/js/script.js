@@ -5,7 +5,9 @@ const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+const scoreCounter = document.getElementById('score-count')
 
+let countRightAnswers = 0;
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener('click', startGame)
@@ -18,8 +20,10 @@ function startGame() {
     headerElement.classList.add('hide')
     rulesElement.classList.add('hide')
     startButton.classList.add('hide')
+    scoreCounter.classList.remove('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
+    countRightAnswers = 0
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
 }
@@ -40,6 +44,7 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
+        answerButtonsElement.classList.remove('disable')
     })
 }
 
@@ -59,10 +64,15 @@ function selectAnswer() {
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
+        answerButtonsElement.classList.add('disable')
     } else {
         startButton.innerText = 'Try Again'
         startButton.classList.remove('hide')
     }
+    if (selectedButton.dataset = correct) {
+        countRightAnswers++
+    }
+    document.getElementById('score').innerHTML = countRightAnswers
 }
 
 function setStatusClass(element, correct) {
