@@ -21,7 +21,7 @@ function startGame() {
     rulesElement.classList.add('hide')
     startButton.classList.add('hide')
     scoreCounter.classList.remove('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    shuffledQuestions = easyquestions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     countRightAnswers = 0
     questionContainerElement.classList.remove('hide')
@@ -89,7 +89,7 @@ function clearStatusClass(element) {
     element.classList.remove('incorrect')
 }
 
-const questions = [
+const easyquestions = [
     {
         pict:  "assets/images/easy-crests/manutd.png",
         answers: [
@@ -123,6 +123,60 @@ const questions = [
             {text: 'Premier League', correct: true},
             {text: 'Championship', correct: false},
             {text: 'League One', correct: false},
+            {text: 'Scottish Premiership', correct: false}
+        ]
+    },
+    {
+        pict:  "assets/images/easy-crests/coventry.png",
+        answers: [
+            {text: 'Premier League', correct: false},
+            {text: 'Championship', correct: true},
+            {text: 'League One', correct: false},
+            {text: 'Scottish Premiership', correct: false}
+        ]
+    },
+    {
+        pict:  "assets/images/easy-crests/hibs.png",
+        answers: [
+            {text: 'Premier League', correct: false},
+            {text: 'Championship', correct: false},
+            {text: 'League One', correct: false},
+            {text: 'Scottish Premiership', correct: true}
+        ]
+    },
+    {
+        pict:  "assets/images/easy-crests/qpr.png",
+        answers: [
+            {text: 'Premier League', correct: false},
+            {text: 'Championship', correct: true},
+            {text: 'League One', correct: false},
+            {text: 'Scottish Premiership', correct: false}
+        ]
+    },
+    {
+        pict:  "assets/images/easy-crests/salop.png",
+        answers: [
+            {text: 'Premier League', correct: true},
+            {text: 'Championship', correct: false},
+            {text: 'League One', correct: true},
+            {text: 'Scottish Premiership', correct: false}
+        ]
+    },
+    {
+        pict:  "assets/images/easy-crests/arsenal.png",
+        answers: [
+            {text: 'Premier League', correct: true},
+            {text: 'Championship', correct: false},
+            {text: 'League One', correct: false},
+            {text: 'Scottish Premiership', correct: false}
+        ]
+    },
+    {
+        pict:  "assets/images/easy-crests/sunderland.png",
+        answers: [
+            {text: 'Premier League', correct: false},
+            {text: 'Championship', correct: false},
+            {text: 'League One', correct: true},
             {text: 'Scottish Premiership', correct: false}
         ]
     },
