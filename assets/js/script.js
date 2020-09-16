@@ -5,7 +5,8 @@ const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
-const scoreCounter = document.getElementById('score-count')
+const scoreCounter = document.getElementById('score-count');
+const livesCounter = document.getElementById('lives-counter');
 
 let countRightAnswers = 0;
 let shuffledQuestions, currentQuestionIndex;
@@ -21,6 +22,7 @@ function startGame() {
     rulesElement.classList.add('hide')
     startButton.classList.add('hide')
     scoreCounter.classList.remove('hide')
+    livesCounter.classList.remove('hide')
     shuffledQuestions = easyquestions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     countRightAnswers = 0
@@ -58,7 +60,6 @@ function resetState() {
 function selectAnswer() {
     const selectedButton = event.target
     const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
@@ -156,7 +157,7 @@ const easyquestions = [
     {
         pict:  "assets/images/easy-crests/salop.png",
         answers: [
-            {text: 'Premier League', correct: true},
+            {text: 'Premier League', correct: false},
             {text: 'Championship', correct: false},
             {text: 'League One', correct: true},
             {text: 'Scottish Premiership', correct: false}
