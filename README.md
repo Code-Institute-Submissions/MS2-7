@@ -24,14 +24,7 @@ I took a Mobile-First approach to developing CrestTest but the game is equally e
 
 ### Wireframes
 
-I used [Balsamiq](https://balsamiq.com/) to design some wireframes which can be seen here: 
-
-
-|   |Index Page |Quiz Page |Results Page |
-|---|---|---|---|---|
-|Mobile View|   |   |   |
-|Tablet View|   |   |   |
-|Browser View |   |   |   |
+I used [Balsamiq](https://balsamiq.com/) to design some wireframes which can be seen [here](https://github.com/JimEv87/MS2/tree/master/wireframes)
 
 ## Features
 
@@ -39,19 +32,15 @@ I used [Balsamiq](https://balsamiq.com/) to design some wireframes which can be 
 
 #### Home Page
 
-- An image featuring the artwork from the band's first album.  Clicking the image takes the user to an external website where the album can be purchased.
-- Review quotes
-- Links to music industry campaign's and charity appeals  
+- 
 
 #### Quiz Page
 
-- Information about the band 
-- Two promotional pictures of the band
+- 
 
 #### Results Page
 
-- An image of the band's promotion of their 2021 tour
-- Information about the tour including live links to google maps and ticket websites
+- 
 
 
 ### Features Left to Implement
