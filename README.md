@@ -18,9 +18,7 @@ I took a Mobile-First approach to developing CrestTest but the game is equally e
 - As a user, I want the rules of the game to be simple and clearly explained to me so that I can get straight to playing.
 - As a user, I want navigation and use to be simple and intuative.
 - As a user, I want the questions to be challenging yet not too hard
-- As a 
-- As a 
-- As a 
+- As a user, I want to be presented with my final score so that I can attempt to beat it or perhaps challenge a friend to beat it 
 
 ### Wireframes
 
@@ -32,11 +30,15 @@ I used [Balsamiq](https://balsamiq.com/) to design some wireframes which can be 
 
 #### Home Page
 
-- 
+- The home page features the CrestTest logo as a heading, a brief quide on how to play, and a start button.
+- A visually pleasing background image of a football stadium that continuously scrolls slowly from side to side 
 
 #### Quiz Page
 
-- 
+- Three footballs at the top of the page to indicate lives remaining, they turn red one by one at every wrong answer.
+- A large clear image of a football team's crest centre screen, with 4 answer options beneath for the user to guess which league that team plays in.
+- Once a selection has been made, the correct answer is shown and a Next button appears for the user to progress to the next question.
+- The running score of total correct answers is shown at the bottom of the screen 
 
 #### Results Page
 
@@ -54,7 +56,6 @@ I used [Balsamiq](https://balsamiq.com/) to design some wireframes which can be 
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for the logic and interactivity
 - [GitHub](https://github.com/) to host the project
 - [GitPod](https://gitpod.io/) to develop the project
-- [Am I Responsive?](https://fontawesome.com/) to visually display the responsiveness of the website
 
 
 ## Testing
@@ -80,8 +81,12 @@ I used only one branch for this project.
 
 ## Credits
 
+- background image provided by [Arsenal.com](https://www.arsenal.com/news/can-you-name-our-94-emirates-stadium-opponents)
+- all crest images provided by [logofootball.net](http://www.logofootball.net/)
+
 ### Content
 
+- The idea for the JavaScript code to use for the quiz was from a tutorial by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
 
 ### Media
 
