@@ -3,6 +3,7 @@
 #header img {
     width: 300px;
     height: 150px;
+    margin-bottom: 10vh;
     
 }
 
@@ -30,7 +31,8 @@
 
 #lives-counter {
     text-align: center;
-    height: 10vh;    
+    height: 10vh; 
+    margin-bottom: 25px;   
 }
 
 #lives-counter img {
@@ -40,6 +42,9 @@
     padding: 5px;
 }
 
+.container {
+    text-align: center;
+}
 
 .container img {
     width: 200px;
@@ -56,18 +61,15 @@
 }
 
 .index-page {
-    padding: 0;
-    margin: 0;
-    display: flex;
+    padding-top: 10vh;
     height: 90vh;
     width: 100vw;
-    justify-content: center;
-    align-items: center;
 }
 
 .container {
     width: 800px;
-    max-width: 80%;
+    max-width: 70%;
+    margin: auto;
 }
 
 .btn-grid {
@@ -91,6 +93,9 @@
     --hue: var(--hue-incorrect);
 }
 
+#action-btns {
+    margin: 0 auto;
+}
 
 .start-btn, .next-btn {
     font-size: 20px;
@@ -98,19 +103,18 @@
     padding: 10px 20px;
 }
 
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #score-count {
-    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 50px;
     width: 100px;
     border: 3px solid black;
     border-radius: 5px;
     background-color: rgba(230, 230, 230, .7); 
+    font-size: 25px;
     font-weight: bold;
+    padding: 5px;
 }
 
 .hide {
@@ -128,7 +132,7 @@
   background-image: url("https://www.arsenal.com/sites/default/files/styles/large_16x9/public/images/emirates_11.jpg?itok=xMYQFoDi");
   background-size: auto 100%;
   -webkit-animation: backgroundscroll 50s linear infinite alternate;
-  animation: backgroundscroll 50s linear infinite alternate;
+  animation: backgroundscroll 60s linear infinite alternate;
 }
 
 @-webkit-keyframes backgroundscroll {
