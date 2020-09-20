@@ -20,6 +20,8 @@ nextButton.addEventListener("click", () => {
   setNextQuestion();
 });
 
+//Start of game
+
 function startGame() {
   headerElement.classList.add("hide");
   rulesElement.classList.add("hide");
@@ -29,9 +31,22 @@ function startGame() {
   shuffledQuestions = easyquestions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   countRightAnswers = 0;
+  livesLeft = 3;
   questionContainerElement.classList.remove("hide");
   setNextQuestion();
 }
+
+//End of game
+
+function endGame() {
+    headerElement.classList.remove("hide");
+    scoreCounter.classList.add("hide");
+    questionContainerElement.classList.add("hide");
+    startButton.classList.remove("hide");
+    nextButton.classList.add("hide");
+}
+
+//Game functionality
 
 function setNextQuestion() {
   resetState();
@@ -80,7 +95,9 @@ function selectAnswer() {
       livesLeft--;
   }
   document.getElementById("score").innerHTML = countRightAnswers;
-  console.log(livesLeft);
+  
+  //Lives left function
+
   if (livesLeft < 1) {
   document.getElementById("life-1").src =
     "assets/images/misc-images/redball.jpg";
@@ -88,6 +105,9 @@ function selectAnswer() {
     "assets/images/misc-images/redball.jpg";
   document.getElementById("life-3").src =
     "assets/images/misc-images/redball.jpg";
+  endGame();
+
+
 } else if (livesLeft < 2) {
   document.getElementById("life-1").src =
     "assets/images/misc-images/redball.jpg";
@@ -127,11 +147,7 @@ function clearStatusClass(element) {
   element.classList.remove("incorrect");
 }
 
-// Lives left function
-
-
-
-// Question bank
+// Question bank (easy)
 
 const easyquestions = [
   {
