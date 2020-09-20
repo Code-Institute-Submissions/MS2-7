@@ -1,5 +1,6 @@
 const headerElement = document.getElementById("header");
 const rulesElement = document.getElementById("rules");
+const resultsElement = document.getElementById("results")
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
@@ -28,6 +29,7 @@ function startGame() {
   startButton.classList.add("hide");
   scoreCounter.classList.remove("hide");
   livesCounter.classList.remove("hide");
+  resultsElement.classList.add("hide")
   shuffledQuestions = easyquestions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   countRightAnswers = 0;
@@ -44,6 +46,9 @@ function endGame() {
     questionContainerElement.classList.add("hide");
     startButton.classList.remove("hide");
     nextButton.classList.add("hide");
+    resultsElement.classList.remove("hide");
+    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/celebration.jpg')";
+
 }
 
 //Game functionality
@@ -94,7 +99,8 @@ function selectAnswer() {
   else {
       livesLeft--;
   }
-  document.getElementById("score").innerHTML = countRightAnswers;
+  document.getElementById("current-score").innerHTML = countRightAnswers;
+  document.getElementById("final-score").innerHTML = countRightAnswers;
   
   //Lives left function
 
@@ -106,8 +112,6 @@ function selectAnswer() {
   document.getElementById("life-3").src =
     "assets/images/misc-images/redball.jpg";
   endGame();
-
-
 } else if (livesLeft < 2) {
   document.getElementById("life-1").src =
     "assets/images/misc-images/redball.jpg";
@@ -237,6 +241,101 @@ const easyquestions = [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: false },
       { text: "League One", correct: true },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+];
+
+// Question bank (medium)
+
+const mediumquestions = [
+  {
+    pict: "assets/images/easy-crests/burton.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: true },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/derby.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: true },
+      { text: "League One", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/doncaster.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: true },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/dundee.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: false },
+      { text: "Scottish Premiership", correct: true },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/fleetwood.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: true },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/fulham.png",
+    answers: [
+      { text: "Premier League", correct: true },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/hamilton.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: false },
+      { text: "Scottish Premiership", correct: true },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/leeds.png",
+    answers: [
+      { text: "Premier League", correct: true },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/norwich.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: true },
+      { text: "League One", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/wolves.png",
+    answers: [
+      { text: "Premier League", correct: true },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: false },
       { text: "Scottish Premiership", correct: false },
     ],
   },

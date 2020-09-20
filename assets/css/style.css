@@ -125,6 +125,23 @@
     padding: 5px;
 }
 
+/* Results */
+
+#results {
+    margin: 0 auto;
+    max-width: 80%;
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: rgba(230, 230, 230, .7);
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+#results h1,p {
+    color: black;
+    font-weight: bold;
+    padding: 0px 10px;
+}
 .hide {
     display: none;
 }
@@ -136,7 +153,7 @@
 
 /* background image */
 
-.background-image {
+#background-image {
   background-image: url("https://www.arsenal.com/sites/default/files/styles/large_16x9/public/images/emirates_11.jpg?itok=xMYQFoDi");
   background-size: auto 100%;
   -webkit-animation: backgroundscroll 50s linear infinite alternate;
