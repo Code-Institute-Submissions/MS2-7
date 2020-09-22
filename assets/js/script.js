@@ -18,7 +18,7 @@ const easyquestions = [
       { text: "Premier League", correct: true },
       { text: "Championship", correct: false },
       { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
@@ -27,16 +27,16 @@ const easyquestions = [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: true },
       { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
-    pict: "assets/images/easy-crests/rangers.png",
+    pict: "assets/images/easy-crests/derby.png",
     answers: [
       { text: "Premier League", correct: false },
-      { text: "Championship", correct: false },
+      { text: "Championship", correct: true },
       { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: true },
+      { text: "League Two", correct: false },
     ],
   },
   {
@@ -45,7 +45,7 @@ const easyquestions = [
       { text: "Premier League", correct: true },
       { text: "Championship", correct: false },
       { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
@@ -54,16 +54,16 @@ const easyquestions = [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: true },
       { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
-    pict: "assets/images/easy-crests/hibs.png",
+    pict: "assets/images/easy-crests/doncaster.png",
     answers: [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: false },
-      { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: true },
+      { text: "League One", correct: true },
+      { text: "League Two", correct: false },
     ],
   },
   {
@@ -72,7 +72,7 @@ const easyquestions = [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: true },
       { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
@@ -81,7 +81,7 @@ const easyquestions = [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: false },
       { text: "League One", correct: true },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
@@ -90,7 +90,7 @@ const easyquestions = [
       { text: "Premier League", correct: true },
       { text: "Championship", correct: false },
       { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
@@ -99,102 +99,52 @@ const easyquestions = [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: false },
       { text: "League One", correct: true },
-      { text: "Scottish Premiership", correct: false },
-    ],
-  },
-];
-
-// Question bank (medium)
-
-const mediumquestions = [
-  {
-    pict: "assets/images/medium-crests/burton.png",
-    answers: [
-      { text: "Premier League", correct: false },
-      { text: "Championship", correct: false },
-      { text: "League One", correct: true },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
-    pict: "assets/images/medium-crests/derby.png",
+    pict: "assets/images/easy-crests/norwich.png",
     answers: [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: true },
       { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
   {
-    pict: "assets/images/medium-crests/doncaster.png",
+    pict: "assets/images/easy-crests/southend.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: false },
+      { text: "League Two", correct: true },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/walsall.png",
+    answers: [
+      { text: "Premier League", correct: false },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: false },
+      { text: "League Two", correct: true },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/wolves.png",
+    answers: [
+      { text: "Premier League", correct: true },
+      { text: "Championship", correct: false },
+      { text: "League One", correct: false },
+      { text: "League Two", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/easy-crests/fleetwood.png",
     answers: [
       { text: "Premier League", correct: false },
       { text: "Championship", correct: false },
       { text: "League One", correct: true },
-      { text: "Scottish Premiership", correct: false },
-    ],
-  },
-  {
-    pict: "assets/images/medium-crests/dundee.png",
-    answers: [
-      { text: "Premier League", correct: false },
-      { text: "Championship", correct: false },
-      { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: true },
-    ],
-  },
-  {
-    pict: "assets/images/medium-crests/fleetwood.png",
-    answers: [
-      { text: "Premier League", correct: false },
-      { text: "Championship", correct: false },
-      { text: "League One", correct: true },
-      { text: "Scottish Premiership", correct: false },
-    ],
-  },
-  {
-    pict: "assets/images/medium-crests/fulham.png",
-    answers: [
-      { text: "Premier League", correct: true },
-      { text: "Championship", correct: false },
-      { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
-    ],
-  },
-  {
-    pict: "assets/images/medium-crests/hamilton.png",
-    answers: [
-      { text: "Premier League", correct: false },
-      { text: "Championship", correct: false },
-      { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: true },
-    ],
-  },
-  {
-    pict: "assets/images/medium-crests/leeds.png",
-    answers: [
-      { text: "Premier League", correct: true },
-      { text: "Championship", correct: false },
-      { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
-    ],
-  },
-  {
-    pict: "assets/images/medium-crests/norwich.png",
-    answers: [
-      { text: "Premier League", correct: false },
-      { text: "Championship", correct: true },
-      { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
-    ],
-  },
-  {
-    pict: "assets/images/medium-crests/wolves.png",
-    answers: [
-      { text: "Premier League", correct: true },
-      { text: "Championship", correct: false },
-      { text: "League One", correct: false },
-      { text: "Scottish Premiership", correct: false },
+      { text: "League Two", correct: false },
     ],
   },
 ];
@@ -208,7 +158,7 @@ const hardquestions = [
       { text: "France Ligue 1", correct: false },
       { text: "Spanish La Liga", correct: false },
       { text: "German Bundesliga", correct: true },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
@@ -217,7 +167,16 @@ const hardquestions = [
       { text: "France Ligue 1", correct: false },
       { text: "Spanish La Liga", correct: true },
       { text: "German Bundesliga", correct: false },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/wolfsburg.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: true },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
@@ -226,7 +185,7 @@ const hardquestions = [
       { text: "France Ligue 1", correct: false },
       { text: "Spanish La Liga", correct: true },
       { text: "German Bundesliga", correct: false },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
@@ -235,7 +194,7 @@ const hardquestions = [
       { text: "France Ligue 1", correct: false },
       { text: "Spanish La Liga", correct: false },
       { text: "German Bundesliga", correct: true },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
@@ -244,7 +203,7 @@ const hardquestions = [
       { text: "France Ligue 1", correct: true },
       { text: "Spanish La Liga", correct: false },
       { text: "German Bundesliga", correct: false },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
@@ -253,7 +212,7 @@ const hardquestions = [
       { text: "France Ligue 1", correct: false },
       { text: "Spanish La Liga", correct: true },
       { text: "German Bundesliga", correct: false },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
@@ -262,7 +221,7 @@ const hardquestions = [
       { text: "France Ligue 1", correct: true },
       { text: "Spanish La Liga", correct: false },
       { text: "German Bundesliga", correct: false },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
@@ -271,7 +230,7 @@ const hardquestions = [
       { text: "France Ligue 1", correct: false },
       { text: "Spanish La Liga", correct: false },
       { text: "German Bundesliga", correct: true },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
@@ -280,16 +239,79 @@ const hardquestions = [
       { text: "France Ligue 1", correct: true },
       { text: "Spanish La Liga", correct: false },
       { text: "German Bundesliga", correct: false },
-      { text: "Portuguse Primeira Liga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
   {
-    pict: "assets/images/hard-crests/porto.png",
+    pict: "assets/images/hard-crests/dundee.png",
     answers: [
       { text: "France Ligue 1", correct: false },
       { text: "Spanish La Liga", correct: false },
       { text: "German Bundesliga", correct: false },
-      { text: "Portuguse Primeira Liga", correct: true },
+      { text: "Scottish Premiership", correct: true },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/frankfurt.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: true },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/hamilton.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: true },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/hibs.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: true },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/lyon.png",
+    answers: [
+      { text: "France Ligue 1", correct: true },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/real.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: true },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/rangers.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: true },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/villareal.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: true },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: false },
     ],
   },
 ];
@@ -374,11 +396,11 @@ function selectAnswer() {
     answerButtonsElement.classList.add("disable");
   } else {
 
-//move to harder questions - NOT WORKING 
+//move to harder questions 
 
-    startGame(mediumquestions);
+startGame(hardquestions);
   }
-  if ((selectedButton.dataset = correct)) {
+  if (selectedButton.dataset = correct) {
     countRightAnswers++;
   }
   else {
@@ -417,8 +439,14 @@ function selectAnswer() {
     "assets/images/misc-images/whiteball.jpg";
   document.getElementById("life-3").src =
     "assets/images/misc-images/whiteball.jpg";
-}
-  
+} 
+
+//complete game
+
+  if (currentQuestionIndex == 15) {
+    endGame();
+  }
+
 }
 
 function setStatusClass(element, correct) {
