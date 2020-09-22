@@ -299,8 +299,7 @@ let livesLeft = 3;
 let shuffledQuestions, currentQuestionIndex;
 
 //Event Listeners
-
-startButton.addEventListener("click", startGame(easyquestions));
+startButton.addEventListener("click", () => startGame(easyquestions));
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
