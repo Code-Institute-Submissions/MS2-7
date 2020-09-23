@@ -8,6 +8,10 @@ const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const scoreCounter = document.getElementById("score-count");
 const livesCounter = document.getElementById("lives-counter");
+const levelUpElement = document.getElementById("level-up");
+const continueButton = document.getElementById("continue-btn");
+const livesReset = document.getElementById("lives-reset")
+
 
 // Question bank (easy)
 
@@ -326,6 +330,11 @@ nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
+continueButton.addEventListener("click", () => {
+  levelUpElement.classList.add("hide");
+  currentQuestionIndex++;
+  setNextQuestion();
+});
 
 //Start of game
 
@@ -354,19 +363,40 @@ function endGame() {
     document.getElementById("start-btn").innerHTML = "Try Again"
     nextButton.classList.add("hide");
     if (countRightAnswers < 10) {
+    document.getElementById("end-message").innerHTML = "Oh Dear..."
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
     document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/sundayleague.jpg')";
-    } else if (countRightAnswers < 20) {
+    } else if (countRightAnswers < 20){
+    document.getElementById("end-message").innerHTML = "Not Bad"
+    resultsElement.classList.remove("hide");
+    document.getElementById("final-score").innerHTML = countRightAnswers;
+    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/oldtrafford.jpg')";
+    } else if (countRightAnswers < 30) {
+    document.getElementById("end-message").innerHTML = "Great Effort"
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
     document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/wales.jpg')";
-    } else {}
+    } else {
+    document.getElementById("end-message").innerHTML = "Amazing!!!"
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
     document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/celebration.jpg')";
     }
 } 
+
+//Level Up message
+
+function levelUp() {
+    levelUpElement.classList.remove("hide");
+    scoreCounter.classList.add("hide");
+    questionContainerElement.classList.add("hide");
+    livesCounter.classList.add("hide");
+    if (livesLeft == 3) {
+    livesReset.classList.add("hide");
+    }
+
+}
 
 //Game functionality
 
@@ -408,10 +438,11 @@ function selectAnswer() {
     answerButtonsElement.classList.add("disable");
   } else {
 
-//move to harder questions 
+//move to harder questions ----------Level up function not working correctly
 
+levelUp();
 startGame(hardquestions);
-document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/crowd.jpg')";
+document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/championsleague.jpg')";
   }
   if (selectedButton.dataset = correct) {
     countRightAnswers++;
