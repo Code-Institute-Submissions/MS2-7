@@ -338,6 +338,8 @@ function startGame(easyquestions) {
   resultsElement.classList.add("hide")
   shuffledQuestions = easyquestions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
+  livesLeft = 3;
+  document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/emirates.jpg')";
   questionContainerElement.classList.remove("hide");
   setNextQuestion();
 }
@@ -349,12 +351,22 @@ function endGame() {
     scoreCounter.classList.add("hide");
     questionContainerElement.classList.add("hide");
     startButton.classList.remove("hide");
+    document.getElementById("start-btn").innerHTML = "Try Again"
     nextButton.classList.add("hide");
+    if (countRightAnswers < 10) {
+    resultsElement.classList.remove("hide");
+    document.getElementById("final-score").innerHTML = countRightAnswers;
+    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/sundayleague.jpg')";
+    } else if (countRightAnswers < 20) {
+    resultsElement.classList.remove("hide");
+    document.getElementById("final-score").innerHTML = countRightAnswers;
+    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/wales.jpg')";
+    } else {}
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
     document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/celebration.jpg')";
-
-}
+    }
+} 
 
 //Game functionality
 
@@ -449,6 +461,8 @@ document.getElementById("background-image").style.backgroundImage = "url('assets
   }
 
 }
+
+//Answer buttons color indicators
 
 function setStatusClass(element, correct) {
   clearStatusClass(element);
