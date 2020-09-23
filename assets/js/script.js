@@ -399,6 +399,7 @@ function selectAnswer() {
 //move to harder questions 
 
 startGame(hardquestions);
+document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/crowd.jpg')";
   }
   if (selectedButton.dataset = correct) {
     countRightAnswers++;
