@@ -36,7 +36,6 @@ const easyquestions = [
       { text: "League Two", correct: false },
     ],
   },
-  /*
   {
     pict: "assets/images/easy-crests/derby.png",
     answers: [
@@ -154,7 +153,6 @@ const easyquestions = [
       { text: "League Two", correct: false },
     ],
   },
-  */
 ];
 
 // Question bank (hard)
@@ -338,11 +336,17 @@ retryButton.addEventListener("click", () => {
   startGame(easyquestions);
   document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/emirates.jpg')";
   retryButton.classList.add("hide");
+  resetLivesCounter()
+  countRightAnswers = 0;
+  document.getElementById("current-score").innerHTML = countRightAnswers;
+
 });
 continueButton.addEventListener("click", () => {
   levelUpElement.classList.add("hide");
   currentQuestionIndex++;
   startGame(hardquestions);
+  resetLivesCounter();
+  document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/championsleague.jpg')";
 });
 
 //Start of game
@@ -391,6 +395,15 @@ function endGame() {
     document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/celebration.jpg')";
     }
 } 
+
+function resetLivesCounter() {
+    document.getElementById("life-1").src =
+    "assets/images/misc-images/whiteball.jpg";
+  document.getElementById("life-2").src =
+    "assets/images/misc-images/whiteball.jpg";
+  document.getElementById("life-3").src =
+    "assets/images/misc-images/whiteball.jpg";
+}
 
 //Level Up message
 
@@ -447,7 +460,6 @@ function selectAnswer() {
 //move to harder questions 
 
 levelUp();
-document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/championsleague.jpg')";
   }
   if (selectedButton.dataset = correct) {
     countRightAnswers++;
@@ -492,7 +504,7 @@ document.getElementById("background-image").style.backgroundImage = "url('assets
 
 //complete game
 
-  if (currentQuestionIndex == 5) {
+  if (currentQuestionIndex == 15) {
     endGame();
   }
 
