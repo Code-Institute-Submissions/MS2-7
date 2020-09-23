@@ -3,6 +3,7 @@ const rulesElement = document.getElementById("rules");
 const resultsElement = document.getElementById("results")
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
+const retryButton = document.getElementById("retry-btn")
 const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -16,6 +17,7 @@ const livesReset = document.getElementById("lives-reset")
 // Question bank (easy)
 
 const easyquestions = [
+
   {
     pict: "assets/images/easy-crests/manutd.png",
     answers: [
@@ -34,6 +36,7 @@ const easyquestions = [
       { text: "League Two", correct: false },
     ],
   },
+  /*
   {
     pict: "assets/images/easy-crests/derby.png",
     answers: [
@@ -151,6 +154,7 @@ const easyquestions = [
       { text: "League Two", correct: false },
     ],
   },
+  */
 ];
 
 // Question bank (hard)
@@ -330,10 +334,15 @@ nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
+retryButton.addEventListener("click", () => {
+  startGame(easyquestions);
+  document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/emirates.jpg')";
+  retryButton.classList.add("hide");
+});
 continueButton.addEventListener("click", () => {
   levelUpElement.classList.add("hide");
   currentQuestionIndex++;
-  setNextQuestion();
+  startGame(hardquestions);
 });
 
 //Start of game
@@ -348,7 +357,6 @@ function startGame(easyquestions) {
   shuffledQuestions = easyquestions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   livesLeft = 3;
-  document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/emirates.jpg')";
   questionContainerElement.classList.remove("hide");
   setNextQuestion();
 }
@@ -359,8 +367,7 @@ function endGame() {
     headerElement.classList.remove("hide");
     scoreCounter.classList.add("hide");
     questionContainerElement.classList.add("hide");
-    startButton.classList.remove("hide");
-    document.getElementById("start-btn").innerHTML = "Try Again"
+    retryButton.classList.remove("hide");
     nextButton.classList.add("hide");
     if (countRightAnswers < 10) {
     document.getElementById("end-message").innerHTML = "Oh Dear..."
@@ -395,7 +402,6 @@ function levelUp() {
     if (livesLeft == 3) {
     livesReset.classList.add("hide");
     }
-
 }
 
 //Game functionality
@@ -438,10 +444,9 @@ function selectAnswer() {
     answerButtonsElement.classList.add("disable");
   } else {
 
-//move to harder questions ----------Level up function not working correctly
+//move to harder questions 
 
 levelUp();
-startGame(hardquestions);
 document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/championsleague.jpg')";
   }
   if (selectedButton.dataset = correct) {
@@ -487,7 +492,7 @@ document.getElementById("background-image").style.backgroundImage = "url('assets
 
 //complete game
 
-  if (currentQuestionIndex == 15) {
+  if (currentQuestionIndex == 5) {
     endGame();
   }
 
