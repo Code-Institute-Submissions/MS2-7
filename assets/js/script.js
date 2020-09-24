@@ -1,24 +1,21 @@
 const headerElement = document.getElementById("header");
 const rulesElement = document.getElementById("rules");
-const resultsElement = document.getElementById("results")
+const resultsElement = document.getElementById("results");
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const retryButton = document.getElementById("retry-btn");
 const facebookShare = document.getElementById("fb-share-btn");
 const questionContainerElement = document.getElementById("question-container");
-const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const scoreCounter = document.getElementById("score-count");
 const livesCounter = document.getElementById("lives-counter");
 const levelUpElement = document.getElementById("level-up");
 const continueButton = document.getElementById("continue-btn");
-const livesReset = document.getElementById("lives-reset")
-
+const livesReset = document.getElementById("lives-reset");
 
 // Question bank (easy)
 
 const easyquestions = [
-
   {
     pict: "assets/images/easy-crests/manutd.png",
     answers: [
@@ -373,6 +370,7 @@ let livesLeft = 3;
 let shuffledQuestions, currentQuestionIndex;
 
 //Event Listeners
+
 startButton.addEventListener("click", () => startGame(easyquestions));
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
@@ -380,19 +378,20 @@ nextButton.addEventListener("click", () => {
 });
 retryButton.addEventListener("click", () => {
   startGame(easyquestions);
-  document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/emirates.jpg')";
+  document.getElementById("background-image").style.backgroundImage =
+    "url('assets/images/background-images/emirates.jpg')";
   retryButton.classList.add("hide");
-  resetLivesCounter()
+  resetLivesCounter();
   countRightAnswers = 0;
   document.getElementById("current-score").innerHTML = countRightAnswers;
-
 });
 continueButton.addEventListener("click", () => {
   levelUpElement.classList.add("hide");
   currentQuestionIndex++;
   startGame(hardquestions);
   resetLivesCounter();
-  document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/oldtrafford.jpg')";
+  document.getElementById("background-image").style.backgroundImage =
+    "url('assets/images/background-images/oldtrafford.jpg')";
 });
 
 //Start of game
@@ -415,36 +414,40 @@ function startGame(easyquestions) {
 //End of game
 
 function endGame() {
-    headerElement.classList.remove("hide");
-    scoreCounter.classList.add("hide");
-    questionContainerElement.classList.add("hide");
-    retryButton.classList.remove("hide");
-    nextButton.classList.add("hide");
-    if (countRightAnswers < 10) {
-    document.getElementById("end-message").innerHTML = "Oh Dear..."
+  headerElement.classList.remove("hide");
+  scoreCounter.classList.add("hide");
+  questionContainerElement.classList.add("hide");
+  retryButton.classList.remove("hide");
+  nextButton.classList.add("hide");
+  if (countRightAnswers < 10) {
+    document.getElementById("end-message").innerHTML = "Oh Dear...";
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
-    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/sundayleague.jpg')";
-    } else if (countRightAnswers < 20){
-    document.getElementById("end-message").innerHTML = "Not Bad"
+    document.getElementById("background-image").style.backgroundImage =
+      "url('assets/images/background-images/sundayleague.jpg')";
+  } else if (countRightAnswers < 20) {
+    document.getElementById("end-message").innerHTML = "Not Bad";
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
-    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/championsleague.jpg')";
-    } else if (countRightAnswers < 33) {
-    document.getElementById("end-message").innerHTML = "Great Effort"
+    document.getElementById("background-image").style.backgroundImage =
+      "url('assets/images/background-images/championsleague.jpg')";
+  } else if (countRightAnswers < 33) {
+    document.getElementById("end-message").innerHTML = "Great Effort";
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
-    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/wales.jpg')";
-    } else {
-    document.getElementById("end-message").innerHTML = "Amazing!!!"
+    document.getElementById("background-image").style.backgroundImage =
+      "url('assets/images/background-images/wales.jpg')";
+  } else {
+    document.getElementById("end-message").innerHTML = "Amazing!!!";
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
-    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/celebration.jpg')";
-    }
-} 
+    document.getElementById("background-image").style.backgroundImage =
+      "url('assets/images/background-images/celebration.jpg')";
+  }
+}
 
 function resetLivesCounter() {
-    document.getElementById("life-1").src =
+  document.getElementById("life-1").src =
     "assets/images/misc-images/whiteball.jpg";
   document.getElementById("life-2").src =
     "assets/images/misc-images/whiteball.jpg";
@@ -455,13 +458,13 @@ function resetLivesCounter() {
 //Level Up message
 
 function levelUp() {
-    levelUpElement.classList.remove("hide");
-    scoreCounter.classList.add("hide");
-    questionContainerElement.classList.add("hide");
-    livesCounter.classList.add("hide");
-    if (livesLeft == 3) {
+  levelUpElement.classList.remove("hide");
+  scoreCounter.classList.add("hide");
+  questionContainerElement.classList.add("hide");
+  livesCounter.classList.add("hide");
+  if (livesLeft == 3) {
     livesReset.classList.add("hide");
-    }
+  }
 }
 
 //Game functionality
@@ -504,57 +507,55 @@ function selectAnswer() {
     answerButtonsElement.classList.add("disable");
   } else {
 
-//move to harder questions 
+//Move to harder questions
 
-levelUp();
+    levelUp();
   }
-  if (selectedButton.dataset = correct) {
+  if ((selectedButton.dataset = correct)) {
     countRightAnswers++;
-  }
-  else {
-      livesLeft--;
+  } else {
+    livesLeft--;
   }
   document.getElementById("current-score").innerHTML = countRightAnswers;
-  
-  //Lives left function
+
+//Lives left function
 
   if (livesLeft < 1) {
-  document.getElementById("life-1").src =
-    "assets/images/misc-images/redball.jpg";
-  document.getElementById("life-2").src =
-    "assets/images/misc-images/redball.jpg";
-  document.getElementById("life-3").src =
-    "assets/images/misc-images/redball.jpg";
-  endGame();
-} else if (livesLeft < 2) {
-  document.getElementById("life-1").src =
-    "assets/images/misc-images/redball.jpg";
-  document.getElementById("life-2").src =
-    "assets/images/misc-images/redball.jpg";
-  document.getElementById("life-3").src =
-    "assets/images/misc-images/whiteball.jpg";
-} else if (livesLeft < 3) {
-  document.getElementById("life-1").src =
-    "assets/images/misc-images/redball.jpg";
-  document.getElementById("life-2").src =
-    "assets/images/misc-images/whiteball.jpg";
-  document.getElementById("life-3").src =
-    "assets/images/misc-images/whiteball.jpg";
-} else {
-  document.getElementById("life-1").src =
-    "assets/images/misc-images/whiteball.jpg";
-  document.getElementById("life-2").src =
-    "assets/images/misc-images/whiteball.jpg";
-  document.getElementById("life-3").src =
-    "assets/images/misc-images/whiteball.jpg";
-} 
+    document.getElementById("life-1").src =
+      "assets/images/misc-images/redball.jpg";
+    document.getElementById("life-2").src =
+      "assets/images/misc-images/redball.jpg";
+    document.getElementById("life-3").src =
+      "assets/images/misc-images/redball.jpg";
+    endGame();
+  } else if (livesLeft < 2) {
+    document.getElementById("life-1").src =
+      "assets/images/misc-images/redball.jpg";
+    document.getElementById("life-2").src =
+      "assets/images/misc-images/redball.jpg";
+    document.getElementById("life-3").src =
+      "assets/images/misc-images/whiteball.jpg";
+  } else if (livesLeft < 3) {
+    document.getElementById("life-1").src =
+      "assets/images/misc-images/redball.jpg";
+    document.getElementById("life-2").src =
+      "assets/images/misc-images/whiteball.jpg";
+    document.getElementById("life-3").src =
+      "assets/images/misc-images/whiteball.jpg";
+  } else {
+    document.getElementById("life-1").src =
+      "assets/images/misc-images/whiteball.jpg";
+    document.getElementById("life-2").src =
+      "assets/images/misc-images/whiteball.jpg";
+    document.getElementById("life-3").src =
+      "assets/images/misc-images/whiteball.jpg";
+  }
 
-//complete game
+//Complete game
 
   if (currentQuestionIndex == 19) {
     endGame();
   }
-
 }
 
 //Answer buttons color indicators
@@ -572,5 +573,3 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("incorrect");
 }
-
-
