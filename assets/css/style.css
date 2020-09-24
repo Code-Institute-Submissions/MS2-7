@@ -116,7 +116,7 @@
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0);
-    bottom: 5vh;
+    bottom: 10vh;
     width: 100px;
     border: 3px solid black;
     border-radius: 5px;
@@ -161,6 +161,10 @@
     font-weight: bold;
     padding: 0px 10px;
     line-height: 2;
+}
+
+#level-up button {
+    margin-bottom: 5px;
 }
 
 .hide {
@@ -271,10 +275,18 @@
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
 
 #score-count {
-    left: 5vw;
+    left: 20vw;
     bottom: 90vh;
+ }
+}
+
+@media screen and (max-height: 570px) {
+
+#score-count {
+    left: 20vw;
+    bottom: 5vh;
  }
 }
