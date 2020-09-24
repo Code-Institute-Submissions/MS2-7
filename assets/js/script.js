@@ -3,7 +3,8 @@ const rulesElement = document.getElementById("rules");
 const resultsElement = document.getElementById("results")
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
-const retryButton = document.getElementById("retry-btn")
+const retryButton = document.getElementById("retry-btn");
+const facebookShare = document.getElementById("fb-share-btn");
 const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -402,7 +403,8 @@ function startGame(easyquestions) {
   startButton.classList.add("hide");
   scoreCounter.classList.remove("hide");
   livesCounter.classList.remove("hide");
-  resultsElement.classList.add("hide")
+  resultsElement.classList.add("hide");
+  facebookShare.classList.add("hide");
   shuffledQuestions = easyquestions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   livesLeft = 3;

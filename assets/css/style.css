@@ -16,7 +16,7 @@
     border-radius: 15px;
     background-color: rgba(230, 230, 230, .7);
     text-align: center;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 #rules h1,p {
@@ -101,6 +101,7 @@
 
 #action-btns {
     margin: 0 auto;
+    margin-bottom: 5vh;
 }
 
 .start-btn, .next-btn {
@@ -162,7 +163,7 @@
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .disable {
