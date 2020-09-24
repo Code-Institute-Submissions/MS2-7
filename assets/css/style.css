@@ -208,12 +208,12 @@
 
 /* Media queries */
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #header img {
     padding-top: 20px;
-    width: 400px;
-    height: 200px;
-    margin-bottom: 10vh;    
+    width: 300px;
+    height: 300px;
+    margin-bottom: 5vh;    
 }
 
 #rules {
@@ -232,6 +232,17 @@
     color: black;
     font-weight: bold;
     padding: 0px 10px;
+}
+
+
+#results p {
+    font-size: 25px;
+    line-height: 2;
+    padding: 0px 10px;
+}
+
+#level-up p {
+    font-size: 25px;
 }
 
 .start-btn, .next-btn {
@@ -290,3 +301,81 @@
     bottom: 5vh;
  }
 }
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #header img {
+    width: 200px;
+    height: 200px;    
+}
+
+#rules {
+    max-width: 60%;
+    margin-bottom: 3vh;
+}
+
+#rules p {
+    font-size: 15px;
+}
+
+#lives-counter {
+    height: 10vh; 
+    margin-bottom: 25px;   
+}
+
+#lives-counter img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+.container img {
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    width: 500px;
+}
+
+.btn-grid {
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#action-btns {
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+.start-btn, .next-btn {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+#score-count {
+    position: fixed;
+    left: 10vw;
+    bottom: 90vh;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+#results {
+    max-width: 600px;
+    border: 5px solid black;
+    border-radius: 15px;
+    margin-bottom: 10vh;
+}
+
+}
+
+
