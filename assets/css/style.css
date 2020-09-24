@@ -292,6 +292,16 @@
     left: 20vw;
     bottom: 90vh;
  }
+
+#background-image {
+  background-image: url("https://www.arsenal.com/sites/default/files/styles/large_16x9/public/images/emirates_11.jpg?itok=xMYQFoDi");
+  -webkit-animation: none;
+  animation: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
 }
 
 @media screen and (max-height: 570px) {
