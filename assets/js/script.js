@@ -320,6 +320,51 @@ const hardquestions = [
       { text: "Scottish Premiership", correct: false },
     ],
   },
+  {
+    pict: "assets/images/hard-crests/dijon.png",
+    answers: [
+      { text: "France Ligue 1", correct: true },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/granada.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: true },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/osasuna.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: true },
+      { text: "German Bundesliga", correct: false },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/mainz.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: true },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
+  {
+    pict: "assets/images/hard-crests/schalke.png",
+    answers: [
+      { text: "France Ligue 1", correct: false },
+      { text: "Spanish La Liga", correct: false },
+      { text: "German Bundesliga", correct: true },
+      { text: "Scottish Premiership", correct: false },
+    ],
+  },
 ];
 
 let countRightAnswers = 0;
@@ -346,7 +391,7 @@ continueButton.addEventListener("click", () => {
   currentQuestionIndex++;
   startGame(hardquestions);
   resetLivesCounter();
-  document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/championsleague.jpg')";
+  document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/oldtrafford.jpg')";
 });
 
 //Start of game
@@ -382,8 +427,8 @@ function endGame() {
     document.getElementById("end-message").innerHTML = "Not Bad"
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
-    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/oldtrafford.jpg')";
-    } else if (countRightAnswers < 30) {
+    document.getElementById("background-image").style.backgroundImage = "url('assets/images/background-images/championsleague.jpg')";
+    } else if (countRightAnswers < 33) {
     document.getElementById("end-message").innerHTML = "Great Effort"
     resultsElement.classList.remove("hide");
     document.getElementById("final-score").innerHTML = countRightAnswers;
@@ -504,7 +549,7 @@ levelUp();
 
 //complete game
 
-  if (currentQuestionIndex == 15) {
+  if (currentQuestionIndex == 19) {
     endGame();
   }
 

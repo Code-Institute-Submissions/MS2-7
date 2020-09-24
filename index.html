@@ -10,77 +10,91 @@
 
 <body id="background-image">
 
-<!--Lives counter--> 
+<!--JavaScript SDK for facebook share-->
 
-<div id="lives-counter" class="hide"><img src="assets/images/misc-images/whiteball.jpg" alt="A white football" id="life-1"><img src="assets/images/misc-images/whiteball.jpg" alt="A white football" id="life-2"><img src="assets/images/misc-images/whiteball.jpg" alt="A white football" id="life-3"></div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="gbOUWTWU"></script>
 
-<div class="index-page">
+	<!--Lives counter-->
 
-	<div class="container">
+	<div id="lives-counter" class="hide">
+		<img src="assets/images/misc-images/whiteball.jpg" alt="A white football" id="life-1"><img src="assets/images/misc-images/whiteball.jpg" alt="A white football" id="life-2"><img src="assets/images/misc-images/whiteball.jpg" alt="A white football" id="life-3"></div>
 
-<!--Header & Rules (Displayed on page opening only--> 
+		<div class="index-page">
 
-		<div id="header">
-                <img src="assets/images/misc-images/CrestTestLogo.png" alt="header">
+			<div class="container">
+
+				<!--Header & Rules (Displayed on page opening only-->
+
+				<div id="header">
+					<img src="assets/images/misc-images/CrestTestLogo.png" alt="header">
         </div>
 
-		<div id="rules">
-				<h1>Aim of the game</h1>
-				<p>Recognise the team from the crest?<br>What league are they in?<br>
-                   It gets harder as you go...<br>You have 3 lives, how many can you get?</p>
-	    </div>
+					<div id="rules">
+						<h1>Aim of the game</h1>
+						<p>Recognise the team from the crest?<br>What league are they in?<br>
+                        It gets harder as you go...<br>You have 3 lives, how many can you get?</p>
+					</div>
 
-<!--Main quiz feature-->  
-      
-        <div class="controls">
+					<!--Main quiz feature-->
 
-        		<div id="question-container" class="hide">
-				    <div id="question">
-					    <img id="crest" src="assets/images/misc-images/cresttest.png" alt="placeholder image">
+					<div class="controls">
+
+						<div id="question-container" class="hide">
+							<div id="question">
+								<img id="crest" src="assets/images/misc-images/cresttest.png" alt="placeholder image">
                     </div>
-				    <div id="answer-buttons" class="btn-grid">
-						<button class="btn">Answer 1</button>
-						<button class="btn">Answer 2</button>
-						<button class="btn">Answer 3</button>
-						<button class="btn">Answer 4</button>
-				    </div>
-			    </div>
-		</div>
+								<div id="answer-buttons" class="btn-grid">
+									<button class="btn">Answer 1</button>
+									<button class="btn">Answer 2</button>
+									<button class="btn">Answer 3</button>
+									<button class="btn">Answer 4</button>
+								</div>
+							</div>
+						</div>
 
-<!--Results-->
+						<!--Results-->
 
-        <div id="results" class="hide">
-            <h1 id="end-message">Well Done</h1>
-            <p>You scored <span id="final-score"></span> out of a possible 35! <br>Why not see if you can beat it?</p>
-        </div>
+						<div id="results" class="hide">
+							<h1 id="end-message">Well Done</h1>
+							<p>You scored <span id="final-score"></span> out of a possible 35!
+								<br>Why not see if you can beat it?</p>
 
-<!--Level Up message -->
+                        <!--Facebook Share button (not displaying)-->
 
-        <div id="level-up" class="hide">
-            <h1>Well Done</h1>
-            <p>You've done great to get this far! <span id="lives-reset">As a reward, have your lives back.</span> It's getting much harder now...</p>
-            <button id="continue-btn" class="btn">Continue</button>
-        </div>
+                                <div class="fb-share-button" data-href="https://jimev87.github.io/MS2/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjimev87.github.io%2FMS2%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                                
+						</div>
 
-<!--Start/Next buttons--> 
+						<!--Level Up message -->
 
-        <div id="action-btns">
+						<div id="level-up" class="hide">
+							<h1>Well Done</h1>
+							<p>You've done great to get this far!
+								<span id="lives-reset">As a reward, have your lives back.</span> It's getting much
+								harder now...</p>
+							<button id="continue-btn" class="btn">Continue</button>
+						</div>
 
-			        <button id="start-btn" class="start-btn btn">Start</button>
-			        <button id="next-btn" class="next-btn btn hide">Next</button>
-                    <button id="retry-btn" class="retry-btn btn hide">Try Again</button>
-        </div>
+						<!--Start/Next buttons-->
 
-<!--Score counter--> 
+						<div id="action-btns">
 
-        <div id="score-count" class="hide">
-                Score: <span id="current-score"></span></div>
-		</div>
+							<button id="start-btn" class="start-btn btn">Start</button>
+							<button id="next-btn" class="next-btn btn hide">Next</button>
+							<button id="retry-btn" class="retry-btn btn hide">Try Again</button>
+						</div>
 
-  
+						<!--Score counter-->
 
-<script src="assets/js/script.js"></script>
-</div>
+						<div id="score-count" class="hide">
+							Score: <span id="current-score"></span></div>
+					</div>
+
+
+
+					<script src="assets/js/script.js"></script>
+				</div>
 </body>
 
 </html>
