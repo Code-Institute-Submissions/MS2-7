@@ -75,25 +75,18 @@
   margin: 20px 0px;
 }
 
-:root {
-  --hue-neutral: 200;
-  --hue-incorrect: 10;
-  --hue-correct: 125;
-}
-
 .btn {
-  --hue: var(--hue-neutral);
-  background-color: hsl(var(--hue), 100%, 50%);
+  background-color: rgb(96, 176, 244);
   border-radius: 5px;
   padding: 5px 10px;
 }
 
 .btn.correct {
-  --hue: var(--hue-correct);
+  background-color: rgb(8, 255, 0);
 }
 
 .btn.incorrect {
-  --hue: var(--hue-incorrect);
+  background-color: rgb(254, 0, 0);
 }
 
 /*start & next buttons*/
