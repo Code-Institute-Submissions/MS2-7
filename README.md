@@ -64,9 +64,12 @@ I used [Balsamiq](https://balsamiq.com/) to design some wireframes which can be 
 - [GitHub](https://github.com/) to host the project
 - [GitPod](https://gitpod.io/) to develop the project
 - [Am I Responsive?](http://ami.responsivedesign.is/#) to test the view of the site on different devices
+- [tinyJPG.com](https://tinyjpg.com/) to compress images for better load speed
+
 
 ## Testing
 
+I've tested the quiz thoroughly and have found it to work perfectly on all of the large variety of devices and browsers I have tried.  I have used the Code Institute Slack Peer-Code-Review channel and asked several friends & family to test out the website.  The feedback I have received indicates that the quiz looks good, easy to navigate, is fun to play and encourages repeat play. The full testing log can be seen [here](https://github.com/JimEv87/MS1/blob/master/testing/testing.md)
 
 ## Deployment
 
