@@ -32,7 +32,7 @@ I used [Balsamiq](https://balsamiq.com/) to design some wireframes which can be 
 
 #### Home Page
 
-- The home page features the CrestTest logo as a heading, a brief quide on how to play, a start button, and a link to share the game on Facebook.
+- The home page features the CrestTest logo as a heading, a brief guide on how to play, a start button, and a link to share the game on Facebook.
 - A visually pleasing background image of a football stadium that continuously scrolls slowly from side to side on mobile and tablet devices.
 
 #### Quiz Page
@@ -103,5 +103,17 @@ I used only one branch for this project.
 
 ### Acknowledgements
 
+I would like to acknowledge and thank:
 
+ - [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/?originalSubdomain=ng) for invaluable mentoring advice
+
+ - The Code Institute tutor suport team for technical coding advice and support
+
+ - [W3 Schools](https://www.w3schools.com/)
+
+ - [StackOverflow](https://stackoverflow.com/)
+
+ - The Code Institute Slack community
+
+ - Sara, Ffion and Ted for helping with testing on various devices, providing feedback and much appreciated support
 
