@@ -17,10 +17,13 @@ I took a Mobile-First approach to developing CrestTest but the game is equally e
 ### User Stories
 
 - As a user, I want the opening page to look great and inspire me to press Start.
-- As a user, I want the rules of the game to be simple and clearly explained to me so that I can get straight to playing.
+- As a user, I want the instructions to be displayed in a prominant position and clearly explained to me so that I can get straight to playing.
 - As a user, I want navigation and use to be simple and intuative.
-- As a user, I want the questions to be challenging yet not too hard
-- As a user, I want to be presented with my final score so that I can attempt to beat it or perhaps challenge a friend to beat it 
+- As a user, I want the questions to be challenging yet not too hard.
+- As a user, I want to be aware of how many lives I have left at all times.
+- As a user, I want to know my score as I play and also be presented with my final score at the end.
+- As a user, I want to easily be able to share the game with friends.
+
 
 ### Wireframes
 
