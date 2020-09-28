@@ -98,7 +98,7 @@ I used only one branch for this project.
 
 ### Media
 
-- all crest images provided by [logofootball.net](http://www.logofootball.net/) https://unsplash.com/images/stock
+- all crest images provided by [logofootball.net](http://www.logofootball.net/)
 - background images provided by [Arsenal.com](https://www.arsenal.com/news/can-you-name-our-94-emirates-stadium-opponents), [unsplash.com](https://unsplash.com/images/stock), [geospatialworld.net](https://www.geospatialworld.net/article/how-gps-and-location-played-a-big-role-in-fifa-world-cup-2018/) and [thesun.com](https://www.the-sun.com/sport/premier-league/74130/jubilant-gareth-bale-celebrates-euro-2020-qualification-by-holding-up-fans-hilarious-wales-golf-madrid-flag/)
 
 ### Acknowledgements
@@ -115,5 +115,5 @@ I would like to acknowledge and thank:
 
  - The Code Institute Slack community
 
- - Sara, Ffion and Ted for helping with testing on various devices, providing feedback and much appreciated support
+ - My partner Sara and my two childern Ffion and Ted for helping with testing on various devices, providing feedback and much appreciated support
 

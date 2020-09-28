@@ -13,7 +13,7 @@ const levelUpElement = document.getElementById("level-up");
 const continueButton = document.getElementById("continue-btn");
 const livesReset = document.getElementById("lives-reset");
 
-// Question bank (easy)
+// Question bank (easy) 
 
 const easyquestions = [
   {
@@ -446,6 +446,8 @@ function endGame() {
   }
 }
 
+//Reset Lives counter
+
 function resetLivesCounter() {
   document.getElementById("life-1").src =
     "assets/images/misc-images/whiteball.jpg";
@@ -467,12 +469,14 @@ function levelUp() {
   }
 }
 
-//Game functionality
+//Set next question
 
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
+
+//Display quesion and answers
 
 function showQuestion(question) {
   document.getElementById("crest").src = question.pict;
@@ -489,12 +493,16 @@ function showQuestion(question) {
   });
 }
 
+//Prepare for next question
+
 function resetState() {
   nextButton.classList.add("hide");
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
+
+//Select an answer
 
 function selectAnswer() {
   const selectedButton = event.target;
@@ -518,7 +526,7 @@ function selectAnswer() {
   }
   document.getElementById("current-score").innerHTML = countRightAnswers;
 
-//Lives left function
+//Lives left 
 
   if (livesLeft < 1) {
     document.getElementById("life-1").src =
@@ -558,7 +566,7 @@ function selectAnswer() {
   }
 }
 
-//Answer buttons color indicators
+//Answer buttons colour indicators
 
 function setStatusClass(element, correct) {
   clearStatusClass(element);
@@ -568,6 +576,8 @@ function setStatusClass(element, correct) {
     element.classList.add("incorrect");
   }
 }
+
+//Reset answer colour indicators to neutral
 
 function clearStatusClass(element) {
   element.classList.remove("correct");

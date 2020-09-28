@@ -21,6 +21,10 @@ I have tested the website on 5 different browsers to see if functionality and ap
 
 ![Image of browser testing results](https://github.com/JimEv87/MS2/blob/master/testing/testing-images/browsertesting.PNG)
 
+I also used [Browserstack](https://www.browserstack.com/speedlab) to measures the website's speed on major browsers, real Android & iOS devices to give a comprehensive view of performance.
+
+![Image of SpeedLab](https://github.com/JimEv87/MS2/blob/master/testing/testing-images/speedreport.PNG)
+
 ## Responsiveness Testing
 
 The website has been tested for responsiveness on several devices. All pages render as expected and all images display correctly.
